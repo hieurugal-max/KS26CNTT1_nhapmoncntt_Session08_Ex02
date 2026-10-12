@@ -1,0 +1,12 @@
+Phần 1: Phân tích
+
+An nhầm lẫn giữa tìm kiếm tên tệp và tìm kiếm nội dung bên trong tệp.
+
+- Get-ChildItem: Dùng để tìm kiếm và liệt kê tệp, thư mục dựa trên tên hoặc đường dẫn, không tìm từ khóa bên trong nội dung tệp.
+- Select-String: Dùng để tìm kiếm từ khóa trong nội dung tệp và hiển thị số thứ tự dòng chứa từ khóa. Mặc định không phân biệt chữ hoa và chữ thường.
+
+Phần 2: Hoàn thiện
+
+Lệnh PowerShell lọc từ khóa error trong tệp access.log và hiển thị số thứ tự dòng:
+
+Select-String -Path ".\access.log" -Pattern "error"
